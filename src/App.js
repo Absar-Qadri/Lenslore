@@ -450,7 +450,6 @@ function WatchedSummary({ watched, active, onActive }) {
   const avgUserRating = average(watched.map((movie) => movie.userRating));
   const avgRuntime = average(watched.map((movie) => movie.runtime));
 
-  console.log(typeof avgRuntime);
   return (
     <div className="summary">
       <button className="summary-btn" onClick={() => onActive(!active)}>
