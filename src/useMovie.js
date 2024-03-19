@@ -10,6 +10,11 @@ export function useMovie(query, callBack) {
   useEffect(
     function () {
       callBack?.();
+      if (query.length < 3) {
+        setMovies([]);
+        setIsError("");
+        return;
+      }
       const controller = new AbortController();
 
       async function moviesFetch() {
@@ -37,11 +42,7 @@ export function useMovie(query, callBack) {
           setIsLoading(false);
         }
       }
-      if (query.length < 3) {
-        setMovies([]);
-        setIsError("");
-        return;
-      }
+
       moviesFetch();
 
       return function () {

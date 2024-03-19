@@ -408,7 +408,10 @@ body::-webkit-scrollbar-corner,
     align-items: center;
     gap: 10px;
   }
-
+  .logo {
+    align-items: center;
+    justify-content: center;
+  }
   .logo,
   .search {
     margin: 1rem;
@@ -459,6 +462,11 @@ body::-webkit-scrollbar-corner,
   }
   .summary p {
     gap: 0rem;
+  }
+
+  .rating {
+    overflow: auto;
+    padding: 2rem 0.4rem;
   }
 }
 
